@@ -126,7 +126,7 @@ end match
 match /releases/eXist-1.2/
 	min revision 7249	# bad copy done before
 	repository exist
-	brach refs/tags/eXist-1.2
+	branch refs/tags/eXist-1.2
 end match
 
 # TODO contiue eXist-1.2.1 requires branches/eXist-stable-1.2 which is taken care of in stable section above 
