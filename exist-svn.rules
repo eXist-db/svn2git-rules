@@ -1,0 +1,148 @@
+
+create repository exist
+end repository
+
+create repository exist-vim-plugin
+end repository
+
+create repository exist-eclipse-plugin
+end repository
+
+
+# ignore the SVN-adjusting commits #TODO do we need this?
+match /
+	min revision 18277
+	max revision 18293
+end match
+
+# trunk/eXist
+match /trunk/eXist/
+	repository exist
+	branch master
+end match
+
+# trunk/eXist <- trunk/eXist-1.0@4757 (rev 4758)
+match /trunk/eXist-1.0/			# TODO overlapping commits between trunk/eXist and trunk/eXist-1.0 could make a mess of 'master' consider using branch/trunk/eXist-1.0 for /trunk/eXist-1.0
+	repository exist
+	branch master
+end match
+
+
+# trunk/eXist-1.0/src <- branches/DLN/eXist-1.0/src@4756 (rev 4757) 
+match /branches/DLN/eXist-1.0/
+	repository exist
+	branch dln/eXist-1.0
+end match
+
+
+# branches/DLN <- trunk@2684 (rev 2685)
+# dont need we need do anything from here as this is matched by trunk/eXist-1.0 above
+
+# branches/eXist-1.0 <- trunk/eXist-1.0@4754 (rev 4755)
+match /branches/eXist-1.0/
+	repository exist
+	branch eXist-1.0
+end match
+
+
+### taking care of /stable
+
+# stable/eXist-1.0 <- branches/eXist-1.0@10444 (rev 10445)
+match /stable/eXist-1.0/
+	repository exist
+	branch eXist-1.0
+end match
+
+# branches/eXist-stable-1.2 <- trunk/eXist@7249 (rev 7250)
+match /branches/eXist-stable-1.2/
+	repository exist
+	branch eXist-1.2.x
+end match
+
+# stable/eXist-1.2.x <- branches/eXist-stable-1.2@10445 (rev 10446)
+match /stable/eXist-1.2.x/
+	repository exist
+	branch eXist-1.2.x
+end match
+
+# stable/eXist-1.4.x <- trunk/eXist@10446 (rev 10447)
+match /stable/eXist-1.4.x/
+	repository exist
+	branch eXist-1.4.x
+end match
+
+# stable/eXist-2.0.x <- trunk/eXist@17694 (rev 17695)
+match /stable/eXist-2.0.x/
+	repository exist
+	branch eXist-2.0.x
+end match
+
+
+### taking care of /tags aka releases
+
+# releases/eXist-1.0-rc1 <- trunk/eXist-1.0@3851 (rev 3852)
+match /releases/eXist-1.0-rc1/
+	repository exist
+	branch refs/tags/eXist-1.0-rc1
+end match 
+
+# releases/eXist-1.0-rc2 <- trunk/eXist-1.0@4285 (rev4286)
+match /releases/eXist-1.0-rc2/
+        repository exist 
+        branch refs/tags/eXist-1.0-rc2
+end match
+
+# releases/eXist-1.1-rc2 <- branches/DLN/eXist-1.0@4289 (rev 4290)
+match /releases/eXist-1.1-rc2/
+        repository exist 
+        branch refs/tags/eXist-1.1-rc2
+end match
+
+# releases/eXist-1.1-final/src <- branches/DLN/eXist-1.0/src@4657 (rev 4658)
+match /releases/eXist-1.1-final/
+	repository exist
+	branch refs/tags/eXist-1.1
+end match
+
+# releases/eXist-1.0-final <- trunk/eXist-1.0@4658 (rev 4659)
+match /releases/eXist-1.0-final/
+	repository exist
+	branch refs/tags/eXist-1.0
+end match
+
+# releases/eXist-1.0.1 <- trunk/eXist-1.0@4723 (rev 4724)
+match /releases/eXist-1.0.1/
+	repository exist
+	branch refs/tags/eXist-1.0.1
+end match
+
+# releases/eXist-1.1.1/src <- branches/DLN/eXist-1.0/src@4723 (rev 4735)
+match /releases/eXist-1.1.1/
+	repository exist
+	branch refs/tags/eXist-1.1.1
+end match
+
+# releases/eXist-1.2 <- trunk/eXist@7248 (rev 7249)
+match /releases/eXist-1.2/
+	min revision 7249	# bad copy done before
+	repository exist
+	brach refs/tags/eXist-1.2
+end match
+
+# TODO contiue eXist-1.2.1 requires branches/eXist-stable-1.2 which is taken care of in stable section above 
+
+#old below
+
+match /trunk/VIMeXist/
+	repository exist-vim-plugin
+	branch master
+end match
+
+match /trunk/eclipse_plugin/
+	repository exist-eclipse-plugin
+	branch master
+end match
+
+match /([^/]+)/
+end match
+
