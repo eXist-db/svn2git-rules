@@ -20,4 +20,4 @@ cd exist
 git repack -a -d -f
 
 git remote add origin git@github.com:eXist-db/exist.git
-git push --all
+git push --all --tags
