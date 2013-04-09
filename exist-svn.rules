@@ -82,30 +82,35 @@ end match
 
 # releases/eXist-1.0-rc1 <- trunk/eXist-1.0@3851 (rev 3852)
 match /releases/eXist-1.0-rc1/
+	max revision 8274	# moved to /attic in 8275
 	repository exist
 	branch refs/tags/eXist-1.0-rc1
 end match 
 
 # releases/eXist-1.0-rc2 <- trunk/eXist-1.0@4285 (rev4286)
 match /releases/eXist-1.0-rc2/
-        repository exist 
+        max revision 8274	# moved to /attic in 8275
+	repository exist 
         branch refs/tags/eXist-1.0-rc2
 end match
 
 # releases/eXist-1.1-rc2 <- branches/DLN/eXist-1.0@4289 (rev 4290)
 match /releases/eXist-1.1-rc2/
-        repository exist 
+	max revision 8274	# moved to /attic in 8275
+	repository exist 
         branch refs/tags/eXist-1.1-rc2
 end match
 
 # releases/eXist-1.1-final/src <- branches/DLN/eXist-1.0/src@4657 (rev 4658)
 match /releases/eXist-1.1-final/
+	max revision 8276	# renamed to /releases/eXist-1.1 in 8277
 	repository exist
 	branch refs/tags/eXist-1.1
 end match
 
 # releases/eXist-1.0-final <- trunk/eXist-1.0@4658 (rev 4659)
 match /releases/eXist-1.0-final/
+	max revision 8275	# renamed to /releases/eXist-1.0 in 8276	
 	repository exist
 	branch refs/tags/eXist-1.0
 end match
@@ -147,6 +152,84 @@ end match
 match /releases/eXist-1.2.2/
 	repository exist
 	branch refs/tags/eXist-1.2.2
+end match
+
+# releases/eXist-1.2.3 <- branches/eXist-stable-1.2@7872 (rev 7873)
+match /releases/eXist-1.2.3/
+	repository exist
+	branch refs/tags/eXist-1.2.3
+end match
+
+# releases/eXist-1.2.4 <- branches/eXist-stable-1.2@8072 (rev 8182)
+match /releases/eXist-1.2.4/
+	repository exist
+	branch refs/tags/eXist-1.2.4
+end match
+
+# releases/eXist-1.2.5 <- branches/eXist-stable-1.2@8668 (rev 8669)
+match /releases/eXist-1.2.5/
+        repository exist
+        branch refs/tags/eXist-1.2.5
+end match
+
+# releases/eXist-1.2.6 <- branches/eXist-stable-1.2@9170 (rev 9171)
+match /releases/eXist-1.2.6/
+        repository exist
+        branch refs/tags/eXist-1.2.6
+end match
+
+# tags/eXist-1.3.0-dev <- trunk/eXist@9966 (rev 9967)
+match /tags/eXist-1.3.0-dev/
+	max revision 15948	# renamed to attic/eXist-1.3.0-dev in 15949
+	repository exist
+	branch refs/tags/eXist-1.3
+end match
+
+# releases/eXist-1.4 <- trunk/eXist@10442 (rev 10443)
+match /releases/eXist-1.4/
+	min revision 10443	# bad copy done before
+	repository exist
+	branch refs/tags/eXist-1.4
+end match
+
+# NB 1.4.x releases require stable/eXist-stable-1.4 which is taken care of in stable section above
+
+# releases/eXist-1.4.1 <- stable/eXist-1.4.x@15155 (rev 15156)
+match /releases/eXist-1.4.1/
+	repository exist
+	branch refs/tags/eXist-1.4.1
+end match
+
+# releases/eXist-2.0-tech-preview <- trunk/eXist@15855 (rev 15886)
+match /releases/eXist-2.0-tech-preview/
+	max revision 15886	# renamed to tags/eXist-2.0-tech-preview in 15891, and later re-copied in 15945
+	repository exist
+	branch refs/tags/eXist-2.0-tech-preview
+end match
+
+# releases/eXist-1.4.3 <- trunk/eXist@16255 (rev 16256)
+match /releases/eXist-1.4.3/
+	min revision 16256	# bad copy before
+	repository exist
+	branch refs/tags/eXist-1.4.3
+end match
+
+# tags/eXist-2.0 <- trunk/eXist@18252 (rev 18274)
+match /tags/eXist-2.0/
+	repository exist
+	branch refs/tags/eXist-2.0
+end match
+
+# tags/eXist-2.0-RC1 <- trunk/eXist@17686 (rev 18275)
+match /tags/eXist-2.0-RC1/
+	repository exist
+	branch refs/tags/eXist-2.0-RC1
+end match
+
+# tags/eXist-2.0-RC2 <- trunk/eXist@17988 (rev 18276)
+match /tags/eXist-2.0-RC2/
+	repository exist
+	branch refs/tags/eXist-2.0-RC2
 end match
 
 
