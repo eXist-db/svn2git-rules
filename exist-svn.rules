@@ -22,9 +22,10 @@ match /trunk/eXist/
 end match
 
 # trunk/eXist <- trunk/eXist-1.0@4757 (rev 4758)
-match /trunk/eXist-1.0/			# TODO overlapping commits between trunk/eXist and trunk/eXist-1.0 could make a mess of 'master' consider using branch/trunk/eXist-1.0 for /trunk/eXist-1.0
+match /trunk/eXist-1.0/	
+	max revision 9972	#was moved to attic/eXist-1.0 in 9973
 	repository exist
-	branch master
+	branch eXist-1.0-trunk	# because we had a branch in subversion called trunk/eXist-1.0 and there was also a eXist-1.0 branch 
 end match
 
 
