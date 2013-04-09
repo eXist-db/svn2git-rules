@@ -49,8 +49,8 @@ end match
 
 ### taking care of /stable
 
-# stable/eXist-1.0 <- branches/eXist-1.0@10444 (rev 10445)
-match /stable/eXist-1.0/
+# stable/eXist-1.0.x <- branches/eXist-1.0@10444 (rev 10445)
+match /stable/eXist-1.0.x/
 	repository exist
 	branch eXist-1.0.x
 end match
