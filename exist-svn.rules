@@ -129,7 +129,27 @@ match /releases/eXist-1.2/
 	branch refs/tags/eXist-1.2
 end match
 
-# TODO contiue eXist-1.2.1 requires branches/eXist-stable-1.2 which is taken care of in stable section above 
+# NB 1.2.x releases require branches/eXist-stable-1.2 which is taken care of in stable section above
+
+# releases/eXist-stable-1.2 <- branches/eXist-stable-1.2@7771 (rev 7772)
+match /releases/eXist-stable-1.2/
+	repository exist
+	branch refs/tags/eXist-1.2.1
+end match
+
+# releases/eXist-1.2.1 <- releases/eXist-stable-1.2@7772 (rev 7773) 
+match /releases/eXist-1.2.1/
+	repository exist
+	branch refs/tags/eXist-1.2.1
+end match
+
+# releases/eXist-1.2.2 <- branches/eXist-stable-1.2@7812 (rev 7813)
+match /releases/eXist-1.2.2/
+	repository exist
+	branch refs/tags/eXist-1.2.2
+end match
+
+
 
 #old below
 
