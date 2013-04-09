@@ -23,9 +23,9 @@ end match
 
 # trunk/eXist <- trunk/eXist-1.0@4757 (rev 4758)
 match /trunk/eXist-1.0/	
-	max revision 9972	#was moved to attic/eXist-1.0 in 9973
+	max revision 9972	# was moved to attic/eXist-1.0 in 9973
 	repository exist
-	branch eXist-1.0-trunk	# because we had a branch in subversion called trunk/eXist-1.0 and there was also a eXist-1.0 branch 
+	branch eXist-1.0-trunk	# TODO consider naming as eXist-1.0 or eXist-1.0.x 
 end match
 
 
