@@ -84,21 +84,21 @@ end match
 match /releases/eXist-1.0-rc1/
 	max revision 8274	# moved to /attic in 8275
 	repository exist
-	branch refs/tags/eXist-1.0-rc1
+	branch refs/tags/eXist-1.0.RC1
 end match 
 
 # releases/eXist-1.0-rc2 <- trunk/eXist-1.0@4285 (rev4286)
 match /releases/eXist-1.0-rc2/
         max revision 8274	# moved to /attic in 8275
 	repository exist 
-        branch refs/tags/eXist-1.0-rc2
+        branch refs/tags/eXist-1.0.RC2
 end match
 
 # releases/eXist-1.1-rc2 <- branches/DLN/eXist-1.0@4289 (rev 4290)
 match /releases/eXist-1.1-rc2/
 	max revision 8274	# moved to /attic in 8275
 	repository exist 
-        branch refs/tags/eXist-1.1-rc2
+        branch refs/tags/eXist-1.1.RC2
 end match
 
 # releases/eXist-1.1-final/src <- branches/DLN/eXist-1.0/src@4657 (rev 4658)
@@ -223,13 +223,13 @@ end match
 # tags/eXist-2.0-RC1 <- trunk/eXist@17686 (rev 18275)
 match /tags/eXist-2.0-RC1/
 	repository exist
-	branch refs/tags/eXist-2.0-RC1
+	branch refs/tags/eXist-2.0.RC1
 end match
 
 # tags/eXist-2.0-RC2 <- trunk/eXist@17988 (rev 18276)
 match /tags/eXist-2.0-RC2/
 	repository exist
-	branch refs/tags/eXist-2.0-RC2
+	branch refs/tags/eXist-2.0.RC2
 end match
 
 
