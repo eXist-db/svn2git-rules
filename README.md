@@ -13,7 +13,7 @@ These rules files are used in conjunction with the svn2git tool written in C++ b
 
 Howto
 -----
-rsync -av svn.code.sf.net::p/exist/code .
+rsync -av svn.code.sf.net::p/exist/code exist-svn-rsync
 
 ./svn-all-fast-export --identity-map ./authors.txt --rules ../exist-svn.rules --add-metadata --add-metadata-notes --stats ./exist-svn-rsync
 
