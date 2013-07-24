@@ -17,6 +17,7 @@ end match
 
 # trunk/eXist
 match /trunk/eXist/
+	max revision 18721
 	repository exist
 	branch master
 end match
@@ -212,7 +213,7 @@ end match
 match /releases/eXist-2.0-tech-preview/
 	max revision 15886	# renamed to tags/eXist-2.0-tech-preview in 15891, and later re-copied in 15945
 	repository exist
-	branch refs/tags/eXist-2.0-tech-preview
+	branch refs/tags/eXist-2.0.Alpha1
 end match
 
 # releases/eXist-1.4.3 <- trunk/eXist@16255 (rev 16256)
@@ -240,6 +241,11 @@ match /tags/eXist-2.0-RC2/
 	branch refs/tags/eXist-2.0.RC2
 end match
 
+# tags/eXist-2.1 <- trunk/eXist@18721 (rev 18730)
+match /tags/eXist-2.1/
+	repository exist
+	branch refs/tags/eXist-2.1
+end match
 
 
 #old below
