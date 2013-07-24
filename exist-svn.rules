@@ -17,7 +17,7 @@ end match
 
 # trunk/eXist
 match /trunk/eXist/
-	max revision 18721
+	max revision 18721	# final subversion revision before tags/eXist-2.1
 	repository exist
 	branch master
 end match
