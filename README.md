@@ -13,9 +13,16 @@ These rules files are used in conjunction with the svn2git tool written in C++ b
 
 Howto
 -----
+git clone git@github.com:eXist-db/svn2git-rules.git
+
 rsync -av svn.code.sf.net::p/exist/code exist-svn-rsync
 
-./svn-all-fast-export --identity-map ./authors.txt --rules ../exist-svn.rules --add-metadata --add-metadata-notes --stats ./exist-svn-rsync
+cd sv2git
+
+./svn-all-fast-export --identity-map ../authors.txt --rules ../svn2git-rule/exist-svn.rules --add-metadata --add-metadata-notes --stats ../exist-svn-rsync
+
+
+Now you need to create an empty repo on GitHub for each repository in exist-svn.rules and then repack and push each repo to GitHub. For example to push the converted eXist repo -
 
 cd exist
 
