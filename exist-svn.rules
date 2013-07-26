@@ -295,18 +295,22 @@ end match
 
 match /apps/xsltforms/
 	repository xsltforms-xar
+	branch master
 end match
 
 match /apps/XSLTForms-Demo/
 	repository xsltforms-demo-app
+	branch master
 end match
 
 match /apps/TEIXLingual/
 	repository matumi
+	branch master
 end match
 
 match /apps/ziziphus/
 	repository tamboti
+	branch master
 end match
 
 
