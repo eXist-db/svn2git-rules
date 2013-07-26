@@ -1,11 +1,34 @@
-
 create repository exist
 end repository
 
-create repository exist-vim-plugin
+create repository vim-plugin
 end repository
 
-create repository exist-eclipse-plugin
+create repository eclipse-plugin
+end repository
+
+create repository documentation
+end repository
+
+create repository demo-apps
+end repository
+
+create repository function-documentation
+end repository
+
+create repository public-xar-repo
+end repository
+
+create repository xsltforms-xar
+end repository
+
+create repository xsltforms-demo-app
+end repository
+
+create repository matumi
+end repository
+
+create repository tamboti
 end repository
 
 
@@ -248,18 +271,59 @@ match /tags/eXist-2.1/
 end match
 
 
-#old below
+# Apps below
+
+match /apps/doc/
+	repository documentation
+	branch master
+end match
+
+match /apps/demo/
+	repository demo-apps
+	branch master
+end match
+
+match /apps/fundocs/
+	repository function-documentation-browser
+	branch master
+end match
+
+match /apps/public-repo/
+	repository public-xar-repo
+	branch master
+end match
+
+match /apps/xsltforms/
+	repository xsltforms-xar
+end match
+
+match /apps/XSLTForms-Demo/
+	repository xsltforms-demo-app
+end match
+
+match /apps/TEIXLingual/
+	repository matumi
+end match
+
+match /apps/ziziphus/
+	repository tamboti
+end match
+
+
+#3 rd party below
 
 match /trunk/VIMeXist/
-	repository exist-vim-plugin
+	repository vim-plugin
 	branch master
 end match
 
 match /trunk/eclipse_plugin/
-	repository exist-eclipse-plugin
+	repository eclipse-plugin
 	branch master
 end match
 
+
+# ignore everything else that does not match the above rules
 match /([^/]+)/
 end match
 
