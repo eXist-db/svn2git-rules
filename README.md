@@ -21,7 +21,7 @@ mkdir export
 
 cd export
 
-../svn2git/svn-all-fast-export --identity-map ../authors.txt --rules ../svn2git-rules/exist-svn.rules --add-metadata --add-metadata-notes --stats ../exist-svn-rsync
+../svn2git/svn-all-fast-export --identity-map ../authors.txt --rules ../svn2git-rules/exist-svn.rules --add-metadata --add-metadata-notes --stats ../exist-svn-rsync/code
 
 
 Now you need to create an empty repo on GitHub for each repository in exist-svn.rules and then repack and push each repo to GitHub. For example to push the converted eXist repo -
