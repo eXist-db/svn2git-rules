@@ -285,7 +285,7 @@ match /apps/demo/
 end match
 
 match /apps/fundocs/
-	repository function-documentation-browser
+	repository function-documentation
 	branch master
 end match
 
