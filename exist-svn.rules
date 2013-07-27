@@ -105,6 +105,7 @@ match /stable/eXist-2.0.x/
 	branch eXist-2.0.x
 end match
 
+# branches/rangeindex <- trunk/eXist@18390 (rev 18391)
 match /branches/rangeindex/
 	repository exist
 	branch feature/lucence-range-index
