@@ -1,3 +1,6 @@
+# The conversion of the eXist-db Subversion to Git took place on Saturday 27 July 2013
+# at that time the latest revision in https://svn.code.sf.net/p/exist/code/ was 18779
+
 create repository exist
 end repository
 
@@ -309,7 +312,7 @@ match /apps/TEIXLingual/
 	branch master
 end match
 
-match /apps/ziziphus/
+match /apps/tamboti/
 	repository tamboti
 	branch master
 end match
